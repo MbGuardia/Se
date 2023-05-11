@@ -1,0 +1,66 @@
+package DIAGNOSTICO;
+private static final String "com.mysql.cj.jdbc.Driver";
+private static final String url"jdbc:mysql//localhost/3306:cliente";
+private static final String usuairo "root";
+private static final String password "";
+public class DataCliente {
+
+
+	public variables actualizarCustomer() {
+		DataCliente conexion = new DataCliente();
+		Connection cn = null;
+		PreparedStatement pstm =null;
+		tyr{
+			cn= conexion.conectar();
+			String id = variables.id;
+			String nom = variables.nom;
+			String cia = variables.cia;
+			String query ="UPDATE cliete.cliente SET id = '"+id+"','Nombre'='"+nom+"','Compania'='"+cia+"'WHERE 'id'= '"+id+"'";
+			pstm = cn.preparedStatement(query);
+			pstm.executeUpdate();
+			
+		}catch(SQLException e) {
+			 e.printStackTrace();
+		}
+		return var;
+	}
+	public variables cargarCustomer() {
+		DataCliente conexion =new DataCliente();
+		Connection cn null;
+		PreparedStatement pstm = null;
+		ResulSet rs= null;
+		try {
+			cn = conexion.conectar();
+			String id = JOptionPane.showInputdialog("ID buscar");
+			String query = "SELECT * FROM cliete Where id=?";
+			pstm = cn.prepareStatement(query);
+			pstm.setString(1, id);
+			rs = pstm.executeQuery();
+			while (rs.next()) {
+				variables.id=rs.getString(1);
+				variables.nom=rs.getString(2);
+				variables.cia=rs.getString(3);
+				System.out.println(variable.id+""+variables.nom+""+variables.cia+"");
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		
+		}finally {
+			try {
+				if(rs!=null) {
+					rs.close();
+				}
+				if(cn!=null) {
+					pstm.close();
+				}
+				if(cn!null) {
+					cn.close();
+				}
+			}catch(Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return var;
+	}
+}
+

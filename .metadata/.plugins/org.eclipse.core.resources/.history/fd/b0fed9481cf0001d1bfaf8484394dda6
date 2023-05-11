@@ -1,0 +1,33 @@
+package sistema;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DataProducto {
+Connection cx;
+public Connection conectar() {
+try {
+cx=DriverManager.getConnection("jdbc:mysql://localhost/certificacion", "root" ,"");
+}catch (SQLException e) {
+e.printStackTrace();
+}
+return cx;
+}
+
+public DataProducto() {
+
+}
+public boolean insertarProducto(NegocioProducto np) {
+return true;
+}
+public boolean vargarProducto(String id) {
+return true;
+}
+public boolean eliminarProducto(String id) {
+return true;
+}
+public boolean actualizarProducto(NegocioProducto np) {
+return true;
+}
+}

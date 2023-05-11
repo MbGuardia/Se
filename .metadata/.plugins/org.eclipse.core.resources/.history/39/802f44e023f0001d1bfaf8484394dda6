@@ -1,0 +1,17 @@
+package sistema;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class Test {
+
+	@org.junit.jupiter.api.Test
+	void test() {
+		NegocioProducto np=new NegocioProducto();
+		np.setId("1");
+		np.setNombre("Cocalo Wspuma");
+		np.setPrecio("15");
+		np.setProveedor("Cocacola");
+		assertTrue(np.insertarProducto());;
+	}
+
+}

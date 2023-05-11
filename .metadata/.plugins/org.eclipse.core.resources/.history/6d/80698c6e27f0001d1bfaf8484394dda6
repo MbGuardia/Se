@@ -1,0 +1,34 @@
+package sistema;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Testc {
+
+	@Test
+	void testDataProducto() {
+		NegocioProducto np=new NegocioProducto();
+		np.setId("dfd");
+		np.setNombre("Cocalo Wspuma");
+		np.setPrecio("15");
+		np.setProveedor("Cocacola");
+		assertEquals(np.insertarProducto(), true);
+	}
+
+	@Test
+	void testInsertarProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCargarProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testEliminarProducto() {
+		fail("Not yet implemented");
+	}
+
+}

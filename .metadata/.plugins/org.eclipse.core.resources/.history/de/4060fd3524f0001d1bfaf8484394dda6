@@ -1,0 +1,14 @@
+package sistema;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class testres {
+
+	@Test
+	void testInsertarProducto() {
+		fail("Not yet implemented");
+	}
+
+}

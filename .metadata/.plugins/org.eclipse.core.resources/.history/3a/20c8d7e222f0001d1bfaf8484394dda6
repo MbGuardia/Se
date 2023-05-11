@@ -1,0 +1,16 @@
+package sistema;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.lang.runtime.ObjectMethods;
+
+import org.junit.jupiter.api.Test;
+
+class TestInsertar extends ObjectMethods {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

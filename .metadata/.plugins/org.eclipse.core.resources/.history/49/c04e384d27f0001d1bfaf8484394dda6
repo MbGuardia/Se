@@ -1,0 +1,29 @@
+package sistema;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class Testc {
+
+	@Test
+	void testDataProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testInsertarProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testCargarProducto() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testEliminarProducto() {
+		fail("Not yet implemented");
+	}
+
+}
